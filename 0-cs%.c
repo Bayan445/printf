@@ -70,11 +70,12 @@ void handleFormatSpecifier(char specifier, va_list thearguments, int *count)
  */
 int _printf(const char *format, ...)
 {
+	int count;
 	va_list thearguments;
 
 	va_start(thearguments, format);
 
-	int count = 0;
+	count = 0;
 
 	while (*format != '\0')
 	{
@@ -95,4 +96,5 @@ int _printf(const char *format, ...)
 	va_end(thearguments);
 	return (count);
 }
+
 
