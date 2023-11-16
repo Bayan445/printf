@@ -24,19 +24,22 @@ void printString(char *str, int *count)
 		count += 6;
 	}
 
-	else
+	/*
+	 * else
 	{
 		write(1, str, strlen(str));
 		count += strlen(str);
 	}
-	/**
-	 * while (*str != '\0')
+	*/
+
+	
+	while (*str != '\0')
 	{
 		putchar(*str);
 		str++;
 		(*count)++;
 	}
-	*/
+
 }
 
 /**
