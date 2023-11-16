@@ -19,13 +19,24 @@ void printChar(int character, int *count)
 void printString(char *str, int *count)
 {
 	if (str == NULL)
-		str = "null";
-	while (*str != '\0')
+	{
+		write(1, "(null)", 6);
+		count += 6;
+	}
+
+	else
+	{
+		write(1, str, strlen(str));
+		count += strlen(str);
+	}
+	/**
+	 * while (*str != '\0')
 	{
 		putchar(*str);
 		str++;
 		(*count)++;
 	}
+	*/
 }
 
 /**
@@ -62,5 +73,4 @@ void handleFormatSpecifier(char specifier, va_list thearguments, int *count)
 		(*count)++;
 	}
 }
-
 
