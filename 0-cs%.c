@@ -67,20 +67,10 @@ void handleFormatSpecifier(char specifier, va_list thearguments, int *count)
 	case 'c':
 		printChar(va_arg(thearguments, int), count);
 		break;
-
+		
 	case 's':
-
-		str = va_arg(thearguments, char*);
-		if (str == NULL)
-		{
-			write(1, "(null)", 6);
-			(*count) += 6;
-		}
-		else
-		{
-			write(1, str, strlen(str));
-			(*count) += strlen(str);
-		}
+		
+		printString(va_arg(thearguments, char*), count);
 		break;
 
 	case '%':
