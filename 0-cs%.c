@@ -60,8 +60,6 @@ void printPercent(int *count)
  */
 void handleFormatSpecifier(char specifier, va_list thearguments, int *count)
 {
-	char *str;
-
 	switch (specifier)
 	{
 	case 'c':
