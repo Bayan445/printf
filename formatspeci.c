@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * handleFormatSpecifier - Handles a format specifier.
  * @specifier: The format specifier to handle.
