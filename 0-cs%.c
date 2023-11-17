@@ -60,7 +60,7 @@ void printPercent(int *count)
  */
 void printInt(int integer, int *count)
 {
-	putchar("%d", integer);
+	printf("%d", integer);
 	(*count)++;
 
 }
