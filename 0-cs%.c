@@ -73,7 +73,7 @@ void printInt(int integer, int *count)
 	int numDigits = 0;
 
 	while (temp != 0)
-		
+
 		temp /= 10;
 		numDigits++;
 
