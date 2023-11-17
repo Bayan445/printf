@@ -60,8 +60,39 @@ void printPercent(int *count)
  */
 void printInt(int integer, int *count)
 {
-	printf("%d", integer);
-	(*count)++;
+	char *str;
+	/*Handle negative integers*/
+	if (integer < 0)
+	{
+		putchar('-');
+		(*count)++;
+		integer = -integer;
+	}
+	/*Convert integer to string*/
+	int temp = integer;
+	int numDigits = 0;
 
+	while (temp != 0)
+		
+		temp /= 10;
+		numDigits++;
+
+	str[numDigits + 1]; /*+1 for null terminator*/
+
+	str[numDigits] = '\0';
+
+	while (numDigits > 0)
+	{
+		numDigits--;
+		str[numDigits] = (integer % 10) + '0';
+		integer /= 10;
+	}
+	/*Print each character of the string*/
+	while (*str != '\0')
+	{
+		putchar(*str);
+		(*str)++;
+		(*count)++;
+	}
 }
 
